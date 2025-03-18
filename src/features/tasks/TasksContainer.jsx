@@ -2,7 +2,14 @@ import React from "react";
 import TaskCard from "./TaskCard";
 import { useOnDragTaskMutation } from "./tasksSlice";
 
-const TasksContainer = ({ task_status, color, tasks, onTaskClick }) => {
+const TasksContainer = ({
+  task_status,
+  color,
+  tasks,
+  onTaskClick,
+  onEditTaskClick,
+  onDeleteTaskClick,
+}) => {
   const [onDragTask] = useOnDragTaskMutation();
 
   const onDrop = async (e) => {
@@ -50,6 +57,8 @@ const TasksContainer = ({ task_status, color, tasks, onTaskClick }) => {
               key={task.id}
               task={task}
               onClick={() => onTaskClick(task)}
+              onEdit={() => onEditTaskClick(task)}
+              onDelete={() => onDeleteTaskClick(task)}
             />
           ))}
       </section>

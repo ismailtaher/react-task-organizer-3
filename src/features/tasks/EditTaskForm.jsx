@@ -7,8 +7,8 @@ import {
   useUpdateTaskMutation,
 } from "./tasksSlice";
 
-const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority }) => {
-  const { taskId } = useParams();
+const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
+  /* const { taskId } = useParams(); */
   const navigate = useNavigate();
 
   // update task & delete task mutations
@@ -107,7 +107,7 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority }) => {
         setStatus("");
         setColor("");
         setPriority("");
-        navigate(`/task/${taskId}`);
+        onClose();
       } catch (err) {
         console.error("Failed to save the Task", err);
       }
@@ -132,7 +132,7 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority }) => {
       setStatus("");
       setColor("");
       setPriority("");
-      navigate("/");
+      onClose();
     } catch (err) {
       console.error("Failed to delete the Task", err);
     }
@@ -200,12 +200,12 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority }) => {
           Save Task
         </button>
 
-        <button
+        {/* <button
           className="button deleteButton"
           type="button"
           onClick={onDeleteTaskClicked}>
           Delete task
-        </button>
+        </button> */}
       </form>
     </section>
   );

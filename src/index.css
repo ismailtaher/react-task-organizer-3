@@ -32,6 +32,15 @@ header {
   height: 5rem;
 }
 
+header button {
+  background-color: inherit;
+  border: none;
+}
+
+header button:hover {
+  text-decoration: underline;
+}
+
 .App {
   display: flex;
   justify-content: center;
@@ -177,6 +186,7 @@ nav a:focus {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   text-align: start;
+  cursor: pointer;
 }
 
 .card-buttons {
@@ -215,15 +225,32 @@ form {
   flex-direction: column;
 }
 
-textarea {
+form .button {
+  background-color: #888;
+  color: white;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  cursor: pointer;
+}
+
+form .button:hover {
+  background-color: #555;
+}
+
+/* textarea {
   height: 150px;
   width: 300px;
+  
 
   @media only screen and (min-width: 768px) {
     min-height: 150px;
     min-width: 700px;
   }
 }
+ */
 
 .single-task {
   padding: 5rem;
@@ -243,6 +270,7 @@ textarea {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -309,4 +337,52 @@ textarea {
   border: none;
   background: none;
   cursor: pointer;
+}
+
+.modal-content textarea {
+  width: 100%;
+  height: 50px;
+  resize: vertical;
+}
+
+.delete-modal {
+  text-align: center;
+  padding: 20px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-buttons button {
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.confirm-button {
+  background-color: rgb(159, 77, 77);
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+}
+
+.confirm-button:hover {
+  background-color: brown;
+}
+
+.cancel-button {
+  background-color: #888;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #555;
 }

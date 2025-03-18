@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header = ({ setAddingTask }) => {
   return (
     <header className="header">
       <h1>Task Organizer</h1>
@@ -11,7 +11,7 @@ const Header = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="task">Create Task</Link>
+            <button onClick={() => setAddingTask(true)}>Create Task</button>
           </li>
         </ul>
       </nav>

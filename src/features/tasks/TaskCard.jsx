@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faTrashAlt } from "@fortawesome/free-regular-svg-icons";
 import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 
-const TaskCard = ({ task, onClick }) => {
+const TaskCard = ({ task, onClick, onEdit, onDelete }) => {
   const onDragStart = (e) => {
     console.log("onDragStart");
     e.dataTransfer.setData("taskId", task.id);
@@ -44,20 +44,29 @@ const TaskCard = ({ task, onClick }) => {
       onDragStart={(e) => onDragStart(e)}
       onClick={onClick}
       style={{ borderLeft: `10px solid ${task.color}` }}>
-      <h3>
-        <Link to={`task/${task.id}`}>{task.title}</Link>
-      </h3>
+      <h3>{task.title}</h3>
 
       <p>{task.content.substring(0, 70)}...</p>
       <TaskProgressBar task={task} />
       <div className="card-buttons">
-        <button className="button" aria-label="Edit task" title="Edit Task">
+        <button
+          className="button"
+          aria-label="Edit task"
+          title="Edit Task"
+          onClick={(e) => {
+            e.stopPropagation();
+            onEdit();
+          }}>
           <FontAwesomeIcon icon={faPenToSquare} />
         </button>
         <button
           className="button deleteButton"
           aria-label="Delete Task"
-          title="Delete Task">
+          title="Delete Task"
+          onClick={(e) => {
+            e.stopPropagation();
+            onDelete();
+          }}>
           <FontAwesomeIcon icon={faTrashAlt} />
         </button>
       </div>

@@ -32,7 +32,6 @@ const SingleTaskPage = ({ taskPriority, taskId }) => {
       <p>
         <span className="bold">Due Date:</span> {task.due_date}
       </p>
-      <Link to={`/task/edit/${task.id}`}>Edit Task</Link>
     </article>
   );
 };

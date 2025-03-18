@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useAddNewTaskMutation } from "./tasksSlice";
 
-const AddTaskForm = ({ taskPriority, HEX_CODE_REGEX }) => {
+const AddTaskForm = ({ taskPriority, HEX_CODE_REGEX, onClose }) => {
   const [addNewTask, { isLoading }] = useAddNewTaskMutation();
 
   const [title, setTitle] = useState("");
@@ -52,7 +52,7 @@ const AddTaskForm = ({ taskPriority, HEX_CODE_REGEX }) => {
         setDueDate("");
         setColor("");
         setPriority("");
-        navigate("/");
+        onClose();
       } catch (err) {
         console.error("Failed to save the post", err);
       }
