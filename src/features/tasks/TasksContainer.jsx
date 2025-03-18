@@ -9,8 +9,22 @@ const TasksContainer = ({
   onTaskClick,
   onEditTaskClick,
   onDeleteTaskClick,
+  handleDragStart,
+  handleDragEnd,
+  draggedTaskStatus,
 }) => {
   const [onDragTask] = useOnDragTaskMutation();
+
+  const validTransitions = {
+    "To Do": ["In Progress"],
+    "In Progress": ["To Do", "In Review"],
+    "In Review": ["In Progress", "Done"],
+    Done: ["In Review"],
+  };
+
+  const isValidDropZone =
+    draggedTaskStatus &&
+    validTransitions[draggedTaskStatus].includes(task_status);
 
   const onDrop = async (e) => {
     console.log("onDrop");
@@ -31,6 +45,15 @@ const TasksContainer = ({
       return;
     }
 
+    const allowedStatuses = validTransitions[taskToUpdate.task_status];
+
+    if (!allowedStatuses.includes(task_status)) {
+      console.warn(
+        `Invalid transition: Cannot move '${taskToUpdate.task_status} to '${task_status}'`
+      );
+      return;
+    }
+
     const updatedTask = { ...taskToUpdate, task_status };
     console.log(updatedTask);
 
@@ -43,7 +66,7 @@ const TasksContainer = ({
 
   return (
     <section
-      className="task-container"
+      className={`task-container ${isValidDropZone ? "highlight-drop" : ""}`}
       onDragOver={(e) => e.preventDefault()}
       onDrop={onDrop}>
       <div className="task-heading" style={{ backgroundColor: `${color}` }}>
@@ -59,6 +82,8 @@ const TasksContainer = ({
               onClick={() => onTaskClick(task)}
               onEdit={() => onEditTaskClick(task)}
               onDelete={() => onDeleteTaskClick(task)}
+              handleDragStart={handleDragStart}
+              handleDragEnd={handleDragEnd}
             />
           ))}
       </section>

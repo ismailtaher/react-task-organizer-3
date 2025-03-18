@@ -130,6 +130,12 @@ nav a:focus {
   }
 }
 
+.task-container.highlight-drop {
+  outline: 3px solid #4caf50; /* Green border for valid drops */
+  background-color: rgba(76, 175, 80, 0.1); /* Light green background */
+  transition: background-color 0.3s ease-in-out;
+}
+
 .task-heading {
   background-color: brown;
   margin: 0;

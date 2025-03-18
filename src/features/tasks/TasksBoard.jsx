@@ -23,6 +23,16 @@ const TasksBoard = ({
   const [editingTask, setEditingTask] = useState(null);
   const [deletingTask, setDeletingTask] = useState(null);
 
+  const [draggedTaskStatus, setDraggedTaskStatus] = useState(null);
+
+  const handleDragStart = (task) => {
+    setDraggedTaskStatus(task.task_status);
+  };
+
+  const handleDragEnd = () => {
+    setDraggedTaskStatus(null);
+  };
+
   let content;
   if (isLoading) {
     content = <p>Loading...</p>;
@@ -44,6 +54,9 @@ const TasksBoard = ({
         onTaskClick={setSelectedTask}
         onEditTaskClick={setEditingTask}
         onDeleteTaskClick={setDeletingTask}
+        handleDragStart={handleDragStart}
+        handleDragEnd={handleDragEnd}
+        draggedTaskStatus={draggedTaskStatus}
       />
     ));
   } else if (isError) {

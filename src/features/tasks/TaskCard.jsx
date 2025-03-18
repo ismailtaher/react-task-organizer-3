@@ -1,13 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import TaskProgressBar from "./TaskProgressBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faTrashAlt } from "@fortawesome/free-regular-svg-icons";
-import { faTrashCan } from "@fortawesome/free-regular-svg-icons";
 
-const TaskCard = ({ task, onClick, onEdit, onDelete }) => {
+const TaskCard = ({
+  task,
+  onClick,
+  onEdit,
+  onDelete,
+  handleDragStart,
+  handleDragEnd,
+}) => {
   const onDragStart = (e) => {
     console.log("onDragStart");
+    handleDragStart(task);
     e.dataTransfer.setData("taskId", task.id);
 
     // Clone the TaskCard
@@ -42,6 +48,7 @@ const TaskCard = ({ task, onClick, onEdit, onDelete }) => {
       className="task"
       draggable
       onDragStart={(e) => onDragStart(e)}
+      onDragEnd={handleDragEnd}
       onClick={onClick}
       style={{ borderLeft: `10px solid ${task.color}` }}>
       <h3>{task.title}</h3>
