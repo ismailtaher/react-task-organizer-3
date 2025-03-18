@@ -93,10 +93,10 @@ nav a:focus {
     gap: 1rem;
   }
   @media only screen and (min-width: 1280px) {
-    gap: 2rem;
+    gap: 1rem;
   }
   @media only screen and (min-width: 1536px) {
-    gap: 5rem;
+    gap: 3rem;
   }
 }
 
@@ -154,11 +154,10 @@ nav a:focus {
   justify-items: center;
   align-items: center;
   max-height: 600px;
-  overflow-x: hidden;
+  /* overflow-x: visible; */
   overflow-y: auto;
-  width: 100%;
-  /* padding-right: 5px; */
-  margin: 0 2rem;
+  /* width: 100%; */
+  padding: 0 10px 0 10px;
 }
 
 .task-sec::-webkit-scrollbar {
