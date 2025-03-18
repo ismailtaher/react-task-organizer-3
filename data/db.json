@@ -4,6 +4,11 @@
       "id": "1",
       "title": "Design Homepage",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "key_objectives": [
+        { "name": "Objective 1", "status": false },
+        { "name": "Objective 2", "status": false },
+        { "name": "Objective 3", "status": false }
+      ],
       "due_date": "2025-03-15",
       "task_status": "In Progress",
       "color": "#FF5733",
@@ -13,6 +18,11 @@
       "id": "2",
       "title": "Fix Login Bug",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "key_objectives": [
+        { "name": "Objective 4", "status": false },
+        { "name": "Objective 5", "status": false },
+        { "name": "Objective 6", "status": false }
+      ],
       "due_date": "2025-03-12",
       "task_status": "To Do",
       "color": "#33FF57",
@@ -22,6 +32,11 @@
       "id": "3",
       "title": "Write Documentation",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse montes pulvinar himenaeos dui purus taciti ex. Volutpat sapien montes malesuada sed libero elementum tincidunt. Tortor eu quisque vehicula proin, maecenas sem. Blandit ultricies taciti egestas accumsan aptent.",
+      "key_objectives": [
+        { "name": "Objective 7", "status": false },
+        { "name": "Objective 8", "status": false },
+        { "name": "Objective 9", "status": false }
+      ],
       "due_date": "2025-03-20",
       "task_status": "To Do",
       "color": "#3357FF",
@@ -31,6 +46,11 @@
       "id": "4",
       "title": "Implement User Dashboard",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Ante accumsan dui lacinia primis donec urna. Fusce nisl cras est, suspendisse elementum proin. Justo magna rutrum dis fermentum semper egestas lobortis penatibus. Dui elementum quisque mus elit conubia ex ante. Ullamcorper pharetra quis quam suscipit pellentesque ad egestas ligula. Bibendum efficitur aliquam justo, blandit urna velit venenatis.",
+      "key_objectives": [
+        { "name": "Objective 10", "status": false },
+        { "name": "Objective 11", "status": false },
+        { "name": "Objective 12", "status": false }
+      ],
       "due_date": "2025-03-18",
       "task_status": "In Progress",
       "color": "#FF33A8",
@@ -40,6 +60,11 @@
       "id": "5",
       "title": "Refactor CSS",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Suspendisse velit platea convallis inceptos, vehicula quisque. Ante maecenas pharetra turpis libero semper sit orci fames magnis. Hendrerit euismod senectus velit nunc non vivamus dignissim.",
+      "key_objectives": [
+        { "name": "Objective 13", "status": false },
+        { "name": "Objective 14", "status": false },
+        { "name": "Objective 15", "status": false }
+      ],
       "due_date": "2025-03-22",
       "task_status": "To Do",
       "color": "#FFD700",
@@ -49,6 +74,11 @@
       "id": "6",
       "title": "Develop Authentication",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Sapien ex mollis pulvinar tellus ut imperdiet tristique. Vehicula torquent posuere auctor turpis, iaculis natoque sed bibendum. Augue massa scelerisque morbi torquent class gravida primis conubia. Per justo lectus class erat himenaeos.",
+      "key_objectives": [
+        { "name": "Objective 16", "status": false },
+        { "name": "Objective 17", "status": false },
+        { "name": "Objective 18", "status": false }
+      ],
       "due_date": "2025-03-10",
       "task_status": "In Progress",
       "color": "#581845",
@@ -58,6 +88,11 @@
       "id": "7",
       "title": "Set Up Database",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Bibendum gravida magna nam magnis metus lorem litora dui. Sed sociosqu pulvinar commodo quis commodo adipiscing curabitur; maecenas ornare. Non primis curae primis tellus inceptos eget fringilla sem. Mattis maximus suspendisse ipsum primis erat nisl. Nam nisl eros cursus nulla porttitor tristique. Class ac finibus maecenas est pulvinar, eu venenatis semper platea.",
+      "key_objectives": [
+        { "name": "Objective 19", "status": false },
+        { "name": "Objective 20", "status": false },
+        { "name": "Objective 21", "status": false }
+      ],
       "due_date": "2025-03-11",
       "task_status": "To Do",
       "color": "#DAF7A6",
@@ -67,6 +102,11 @@
       "id": "8",
       "title": "Optimize Performance",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Lacinia fringilla nisi odio ligula habitasse tortor. Sed mi nibh diam proin mus. Non varius vivamus vulputate accumsan lobortis tortor nulla. Pulvinar nisi justo mattis taciti a nibh cras magnis. Sem vehicula dapibus eleifend pharetra porttitor sociosqu fusce ridiculus.",
+      "key_objectives": [
+        { "name": "Objective 22", "status": false },
+        { "name": "Objective 23", "status": false },
+        { "name": "Objective 24", "status": false }
+      ],
       "due_date": "2025-03-14",
       "task_status": "In Progress",
       "color": "#900C3F",
@@ -76,6 +116,11 @@
       "id": "9",
       "title": "Add Dark Mode",
       "content": " Lorem ipsum odor amet, consectetuer adipiscing elit. Lacinia fringilla nisi odio ligula habitasse tortor. Sed mi nibh diam proin mus. Non varius vivamus vulputate accumsan lobortis tortor nulla. Pulvinar nisi justo mattis taciti a nibh cras magnis. Sem vehicula dapibus eleifend pharetra porttitor sociosqu fusce ridiculus.",
+      "key_objectives": [
+        { "name": "Objective 25", "status": false },
+        { "name": "Objective 26", "status": false },
+        { "name": "Objective 27", "status": false }
+      ],
       "due_date": "2025-03-22",
       "task_status": "In Progress",
       "color": "#C70039",
@@ -85,6 +130,11 @@
       "id": "10",
       "title": "Develop Notifications",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Lacinia fringilla nisi odio ligula habitasse tortor. Sed mi nibh diam proin mus. Non varius vivamus vulputate accumsan lobortis tortor nulla. Pulvinar nisi justo mattis taciti a nibh cras magnis. Sem vehicula dapibus eleifend pharetra porttitor sociosqu fusce ridiculus.",
+      "key_objectives": [
+        { "name": "Objective 28", "status": false },
+        { "name": "Objective 29", "status": false },
+        { "name": "Objective 30", "status": false }
+      ],
       "due_date": "2025-03-10",
       "task_status": "To Do",
       "color": "#FF5733",
@@ -94,6 +144,11 @@
       "id": "11",
       "title": "Code Review for Backend",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Hendrerit natoque bibendum mus integer morbi vulputate sollicitudin. Inceptos auctor aenean nostra eros facilisis suscipit porttitor volutpat. Et duis faucibus ridiculus vehicula senectus habitasse ac tristique. Sit ullamcorper elit nibh; justo nullam natoque.",
+      "key_objectives": [
+        { "name": "Objective 31", "status": false },
+        { "name": "Objective 32", "status": false },
+        { "name": "Objective 33", "status": false }
+      ],
       "due_date": "2025-03-08",
       "task_status": "In Review",
       "color": "#1A5276",
@@ -103,6 +158,11 @@
       "id": "12",
       "title": "UI Testing for Forms",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Integer sodales commodo finibus nostra integer. Leo lectus odio himenaeos convallis diam ridiculus cubilia sodales urna. Eleifend ultrices pellentesque nam tincidunt dolor eget curae magnis. Suspendisse porttitor fringilla sollicitudin hac porta arcu.",
+      "key_objectives": [
+        { "name": "Objective 34", "status": false },
+        { "name": "Objective 35", "status": false },
+        { "name": "Objective 36", "status": false }
+      ],
       "due_date": "2025-03-09",
       "task_status": "In Review",
       "color": "#2E86C1",
@@ -112,6 +172,11 @@
       "id": "13",
       "title": "Write Unit Tests",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Porttitor enim scelerisque urna varius sollicitudin pretium maecenas. Feugiat congue commodo nec duis nunc lectus dolor magna. Dictum tincidunt nascetur adipiscing tortor posuere tempus faucibus gravida. Finibus pellentesque vivamus pulvinar dignissim suspendisse nunc sociosqu fermentum. Porta mauris lacinia; dignissim convallis tristique morbi. Litora velit tempor tellus eros conubia curabitur. Malesuada inceptos dis eros torquent et; at sapien cras.",
+      "key_objectives": [
+        { "name": "Objective 37", "status": false },
+        { "name": "Objective 38", "status": false },
+        { "name": "Objective 39", "status": false }
+      ],
       "due_date": "2025-03-13",
       "task_status": "In Review",
       "color": "#E74C3C",
@@ -121,6 +186,11 @@
       "id": "14",
       "title": "Test API Endpoints",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Porttitor enim scelerisque urna varius sollicitudin pretium maecenas. Feugiat congue commodo nec duis nunc lectus dolor magna. Dictum tincidunt nascetur adipiscing tortor posuere tempus faucibus gravida. Finibus pellentesque vivamus pulvinar dignissim suspendisse nunc sociosqu fermentum. Porta mauris lacinia; dignissim convallis tristique morbi. Litora velit tempor tellus eros conubia curabitur. Malesuada inceptos dis eros torquent et; at sapien cras.",
+      "key_objectives": [
+        { "name": "Objective 40", "status": false },
+        { "name": "Objective 41", "status": false },
+        { "name": "Objective 42", "status": false }
+      ],
       "due_date": "2025-03-16",
       "task_status": "In Review",
       "color": "#A93226",
@@ -130,6 +200,11 @@
       "id": "15",
       "title": "Accessibility Audit",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Curae tempor habitant ornare malesuada in magna magna. Quisque inceptos ad ante himenaeos etiam euismod ad blandit. Hendrerit non mus sit ullamcorper nascetur ipsum enim suscipit. Habitant ut leo parturient pretium cubilia pellentesque libero eu. Odio lobortis magnis, eu maecenas himenaeos cubilia imperdiet!",
+      "key_objectives": [
+        { "name": "Objective 43", "status": false },
+        { "name": "Objective 44", "status": false },
+        { "name": "Objective 45", "status": false }
+      ],
       "due_date": "2025-03-21",
       "task_status": "In Review",
       "color": "#E67E22",
@@ -139,6 +214,11 @@
       "id": "16",
       "title": "Deploy to Staging",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Sagittis lobortis posuere odio potenti viverra maximus a ante. Sem congue tempus est ante maecenas. Pellentesque mattis arcu purus; odio fames montes. Hendrerit netus placerat imperdiet himenaeos mauris luctus. Consectetur nullam class fringilla ex; et blandit. Justo iaculis eros potenti morbi fringilla egestas. Himenaeos tortor vestibulum platea taciti in tellus elementum, sed montes.",
+      "key_objectives": [
+        { "name": "Objective 46", "status": false },
+        { "name": "Objective 47", "status": false },
+        { "name": "Objective 48", "status": false }
+      ],
       "due_date": "2025-03-07",
       "task_status": "Done",
       "color": "#2ECC71",
@@ -148,6 +228,11 @@
       "id": "17",
       "title": "Bug Fix: Mobile Menu",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Mauris maecenas aliquet purus congue sem amet tellus quam taciti. Aenean feugiat morbi cursus euismod habitant nibh commodo ad? Magna quis amet lobortis finibus posuere nullam elit. Laoreet enim velit nisi ex, nec morbi volutpat etiam sit? Tincidunt eu penatibus faucibus eget magnis.",
+      "key_objectives": [
+        { "name": "Objective 49", "status": false },
+        { "name": "Objective 50", "status": false },
+        { "name": "Objective 51", "status": false }
+      ],
       "due_date": "2025-03-06",
       "task_status": "Done",
       "color": "#7D3C98",
@@ -157,6 +242,11 @@
       "id": "18",
       "title": "Update Documentation",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Posuere purus euismod libero leo et dis. In sociosqu varius non gravida vivamus at. Ultricies feugiat penatibus mi cras, nullam netus. Duis nisi tempor interdum posuere natoque sollicitudin.",
+      "key_objectives": [
+        { "name": "Objective 52", "status": false },
+        { "name": "Objective 53", "status": false },
+        { "name": "Objective 54", "status": false }
+      ],
       "due_date": "2025-03-05",
       "task_status": "Done",
       "color": "#F39C12",
@@ -166,6 +256,11 @@
       "id": "19",
       "title": "Launch Marketing Campaign",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Parturient felis nostra nullam montes, lacinia rhoncus nibh. Nam interdum vestibulum ligula ridiculus fames massa? Nulla maecenas commodo vel lacus vulputate convallis varius. Nascetur habitant egestas feugiat tristique class penatibus eu. Lobortis natoque urna scelerisque urna rutrum.",
+      "key_objectives": [
+        { "name": "Objective 55", "status": false },
+        { "name": "Objective 56", "status": false },
+        { "name": "Objective 57", "status": false }
+      ],
       "due_date": "2025-03-04",
       "task_status": "Done",
       "color": "#F1C40F",
@@ -175,6 +270,11 @@
       "id": "20",
       "title": "Migrate to Production",
       "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Vivamus scelerisque at leo himenaeos eleifend, ad scelerisque pellentesque. Diam habitasse et; lacus in bibendum est. Massa taciti lacinia tincidunt cras maecenas suscipit urna. Mus maecenas et dolor fusce interdum suscipit mus?",
+      "key_objectives": [
+        { "name": "Objective 58", "status": false },
+        { "name": "Objective 59", "status": false },
+        { "name": "Objective 60", "status": false }
+      ],
       "due_date": "2025-03-03",
       "task_status": "Done",
       "color": "#E74C3C",
