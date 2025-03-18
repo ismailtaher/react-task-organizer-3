@@ -16,6 +16,8 @@ The app uses **Drag & Drop API** from HTML 5. You can drag & drop a task from on
 All the **CRUD operations** along with Drag and Drop updates are being handled inside `tasksSlice.js`.
 Also the tasks are now sorted on the basis of their **priority** (low, medium, high & extreme). Each tasks can be viewed separately in the the **Modal** containing `SingleTaskPage.jsx` , which gives the details about that specific task. You can **Edit or Delete** a task using the buttons provided on each task's card.
 
+Each container now has limitations to what task it can accept or not depending on that task's status. A green outline will appear over certain containers to signify if they can accept that task or not.
+
 A progress bar is shown below the task in the TaskCard component (right now the progress bar depends on the task’s status e.g. if a task’s status is “To Do”, the progress bar would show 25% and if the task’s status is “In Review”, the progress bar would show 75%).
 
 UI updates also applied along with media queries to make it work on all screen sizes (hopefully).
