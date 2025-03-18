@@ -1,0 +1,164 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Design Homepage",
+      "due_date": "2025-03-15",
+      "task_status": "To Do",
+      "color": "#FF5733",
+      "priority": "2"
+    },
+    {
+      "id": "2",
+      "title": "Fix Login Bug",
+      "due_date": "2025-03-12",
+      "task_status": "To Do",
+      "color": "#33FF57",
+      "priority": "4"
+    },
+    {
+      "id": "3",
+      "title": "Write Documentation",
+      "due_date": "2025-03-20",
+      "task_status": "To Do",
+      "color": "#3357FF",
+      "priority": "1"
+    },
+    {
+      "id": "4",
+      "title": "Implement User Dashboard",
+      "due_date": "2025-03-18",
+      "task_status": "To Do",
+      "color": "#FF33A8",
+      "priority": "2"
+    },
+    {
+      "id": "5",
+      "title": "Refactor CSS",
+      "due_date": "2025-03-22",
+      "task_status": "To Do",
+      "color": "#FFD700",
+      "priority": "1"
+    },
+    {
+      "id": "6",
+      "title": "Develop Authentication",
+      "due_date": "2025-03-10",
+      "task_status": "In Progress",
+      "color": "#581845",
+      "priority": "4"
+    },
+    {
+      "id": "7",
+      "title": "Set Up Database",
+      "due_date": "2025-03-11",
+      "task_status": "In Progress",
+      "color": "#DAF7A6",
+      "priority": "2"
+    },
+    {
+      "id": "8",
+      "title": "Optimize Performance",
+      "due_date": "2025-03-14",
+      "task_status": "In Progress",
+      "color": "#900C3F",
+      "priority": "1"
+    },
+    {
+      "id": "9",
+      "title": "Add Dark Mode",
+      "due_date": "2025-03-22",
+      "task_status": "In Progress",
+      "color": "#C70039",
+      "priority": "2"
+    },
+    {
+      "id": "10",
+      "title": "Develop Notifications",
+      "due_date": "2025-03-10",
+      "task_status": "In Progress",
+      "color": "#FF5733",
+      "priority": "3"
+    },
+    {
+      "id": "11",
+      "title": "Code Review for Backend",
+      "due_date": "2025-03-08",
+      "task_status": "In Review",
+      "color": "#1A5276",
+      "priority": "2"
+    },
+    {
+      "id": "12",
+      "title": "UI Testing for Forms",
+      "due_date": "2025-03-09",
+      "task_status": "In Review",
+      "color": "#2E86C1",
+      "priority": "1"
+    },
+    {
+      "id": "13",
+      "title": "Write Unit Tests",
+      "due_date": "2025-03-13",
+      "task_status": "In Review",
+      "color": "#E74C3C",
+      "priority": "3"
+    },
+    {
+      "id": "14",
+      "title": "Test API Endpoints",
+      "due_date": "2025-03-16",
+      "task_status": "In Review",
+      "color": "#A93226",
+      "priority": "4"
+    },
+    {
+      "id": "15",
+      "title": "Accessibility Audit",
+      "due_date": "2025-03-21",
+      "task_status": "In Review",
+      "color": "#E67E22",
+      "priority": "1"
+    },
+    {
+      "id": "16",
+      "title": "Deploy to Staging",
+      "due_date": "2025-03-07",
+      "task_status": "Done",
+      "color": "#2ECC71",
+      "priority": "3"
+    },
+    {
+      "id": "17",
+      "title": "Bug Fix: Mobile Menu",
+      "due_date": "2025-03-06",
+      "task_status": "Done",
+      "color": "#7D3C98",
+      "priority": "4"
+    },
+    {
+      "id": "18",
+      "title": "Update Documentation",
+      "due_date": "2025-03-05",
+      "task_status": "Done",
+      "color": "#F39C12",
+      "priority": "1"
+    },
+    {
+      "id": "19",
+      "title": "Launch Marketing Campaign",
+      "due_date": "2025-03-04",
+      "task_status": "Done",
+      "color": "#F1C40F",
+      "priority": "2"
+    },
+    {
+      "id": "20",
+      "title": "Migrate to Production",
+      "due_date": "2025-03-03",
+      "task_status": "Done",
+      "color": "#E74C3C",
+      "priority": "1"
+    }
+  ]
+}

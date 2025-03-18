@@ -1,0 +1,184 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Design Homepage",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "due_date": "2025-03-15",
+      "task_status": "In Progress",
+      "color": "#FF5733",
+      "priority": "2"
+    },
+    {
+      "id": "2",
+      "title": "Fix Login Bugs",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "due_date": "2025-03-12",
+      "task_status": "To Do",
+      "color": "#33FF57",
+      "priority": "4"
+    },
+    {
+      "id": "3",
+      "title": "Write Documentation",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse montes pulvinar himenaeos dui purus taciti ex. Volutpat sapien montes malesuada sed libero elementum tincidunt. Tortor eu quisque vehicula proin, maecenas sem. Blandit ultricies taciti egestas accumsan aptent.",
+      "due_date": "2025-03-20",
+      "task_status": "To Do",
+      "color": "#3357FF",
+      "priority": "1"
+    },
+    {
+      "id": "4",
+      "title": "Implement User Dashboard",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Ante accumsan dui lacinia primis donec urna. Fusce nisl cras est, suspendisse elementum proin. Justo magna rutrum dis fermentum semper egestas lobortis penatibus. Dui elementum quisque mus elit conubia ex ante. Ullamcorper pharetra quis quam suscipit pellentesque ad egestas ligula. Bibendum efficitur aliquam justo, blandit urna velit venenatis.",
+      "due_date": "2025-03-18",
+      "task_status": "In Progress",
+      "color": "#FF33A8",
+      "priority": "2"
+    },
+    {
+      "id": "5",
+      "title": "Refactor CSS",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Suspendisse velit platea convallis inceptos, vehicula quisque. Ante maecenas pharetra turpis libero semper sit orci fames magnis. Hendrerit euismod senectus velit nunc non vivamus dignissim.",
+      "due_date": "2025-03-22",
+      "task_status": "To Do",
+      "color": "#FFD700",
+      "priority": "1"
+    },
+    {
+      "id": "6",
+      "title": "Develop Authentication",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Sapien ex mollis pulvinar tellus ut imperdiet tristique. Vehicula torquent posuere auctor turpis, iaculis natoque sed bibendum. Augue massa scelerisque morbi torquent class gravida primis conubia. Per justo lectus class erat himenaeos.",
+      "due_date": "2025-03-10",
+      "task_status": "In Progress",
+      "color": "#581845",
+      "priority": "4"
+    },
+    {
+      "id": "7",
+      "title": "Set Up Database",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Bibendum gravida magna nam magnis metus lorem litora dui. Sed sociosqu pulvinar commodo quis commodo adipiscing curabitur; maecenas ornare. Non primis curae primis tellus inceptos eget fringilla sem. Mattis maximus suspendisse ipsum primis erat nisl. Nam nisl eros cursus nulla porttitor tristique. Class ac finibus maecenas est pulvinar, eu venenatis semper platea.",
+      "due_date": "2025-03-11",
+      "task_status": "To Do",
+      "color": "#DAF7A6",
+      "priority": "2"
+    },
+    {
+      "id": "8",
+      "title": "Optimize Performance",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Lacinia fringilla nisi odio ligula habitasse tortor. Sed mi nibh diam proin mus. Non varius vivamus vulputate accumsan lobortis tortor nulla. Pulvinar nisi justo mattis taciti a nibh cras magnis. Sem vehicula dapibus eleifend pharetra porttitor sociosqu fusce ridiculus.",
+      "due_date": "2025-03-14",
+      "task_status": "In Progress",
+      "color": "#900C3F",
+      "priority": "1"
+    },
+    {
+      "id": "9",
+      "title": "Add Dark Mode",
+      "content": " Lorem ipsum odor amet, consectetuer adipiscing elit. Lacinia fringilla nisi odio ligula habitasse tortor. Sed mi nibh diam proin mus. Non varius vivamus vulputate accumsan lobortis tortor nulla. Pulvinar nisi justo mattis taciti a nibh cras magnis. Sem vehicula dapibus eleifend pharetra porttitor sociosqu fusce ridiculus.",
+      "due_date": "2025-03-22",
+      "task_status": "In Progress",
+      "color": "#C70039",
+      "priority": "2"
+    },
+    {
+      "id": "10",
+      "title": "Develop Notifications",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Lacinia fringilla nisi odio ligula habitasse tortor. Sed mi nibh diam proin mus. Non varius vivamus vulputate accumsan lobortis tortor nulla. Pulvinar nisi justo mattis taciti a nibh cras magnis. Sem vehicula dapibus eleifend pharetra porttitor sociosqu fusce ridiculus.",
+      "due_date": "2025-03-10",
+      "task_status": "To Do",
+      "color": "#FF5733",
+      "priority": "3"
+    },
+    {
+      "id": "11",
+      "title": "Code Review for Backend",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Hendrerit natoque bibendum mus integer morbi vulputate sollicitudin. Inceptos auctor aenean nostra eros facilisis suscipit porttitor volutpat. Et duis faucibus ridiculus vehicula senectus habitasse ac tristique. Sit ullamcorper elit nibh; justo nullam natoque.",
+      "due_date": "2025-03-08",
+      "task_status": "In Review",
+      "color": "#1A5276",
+      "priority": "2"
+    },
+    {
+      "id": "12",
+      "title": "UI Testing for Forms",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Integer sodales commodo finibus nostra integer. Leo lectus odio himenaeos convallis diam ridiculus cubilia sodales urna. Eleifend ultrices pellentesque nam tincidunt dolor eget curae magnis. Suspendisse porttitor fringilla sollicitudin hac porta arcu.",
+      "due_date": "2025-03-09",
+      "task_status": "In Review",
+      "color": "#2E86C1",
+      "priority": "1"
+    },
+    {
+      "id": "13",
+      "title": "Write Unit Tests",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Porttitor enim scelerisque urna varius sollicitudin pretium maecenas. Feugiat congue commodo nec duis nunc lectus dolor magna. Dictum tincidunt nascetur adipiscing tortor posuere tempus faucibus gravida. Finibus pellentesque vivamus pulvinar dignissim suspendisse nunc sociosqu fermentum. Porta mauris lacinia; dignissim convallis tristique morbi. Litora velit tempor tellus eros conubia curabitur. Malesuada inceptos dis eros torquent et; at sapien cras.",
+      "due_date": "2025-03-13",
+      "task_status": "In Review",
+      "color": "#E74C3C",
+      "priority": "3"
+    },
+    {
+      "id": "14",
+      "title": "Test API Endpoints",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Porttitor enim scelerisque urna varius sollicitudin pretium maecenas. Feugiat congue commodo nec duis nunc lectus dolor magna. Dictum tincidunt nascetur adipiscing tortor posuere tempus faucibus gravida. Finibus pellentesque vivamus pulvinar dignissim suspendisse nunc sociosqu fermentum. Porta mauris lacinia; dignissim convallis tristique morbi. Litora velit tempor tellus eros conubia curabitur. Malesuada inceptos dis eros torquent et; at sapien cras.",
+      "due_date": "2025-03-16",
+      "task_status": "In Review",
+      "color": "#A93226",
+      "priority": "4"
+    },
+    {
+      "id": "15",
+      "title": "Accessibility Audit",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Curae tempor habitant ornare malesuada in magna magna. Quisque inceptos ad ante himenaeos etiam euismod ad blandit. Hendrerit non mus sit ullamcorper nascetur ipsum enim suscipit. Habitant ut leo parturient pretium cubilia pellentesque libero eu. Odio lobortis magnis, eu maecenas himenaeos cubilia imperdiet!",
+      "due_date": "2025-03-21",
+      "task_status": "In Review",
+      "color": "#E67E22",
+      "priority": "1"
+    },
+    {
+      "id": "16",
+      "title": "Deploy to Staging",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Sagittis lobortis posuere odio potenti viverra maximus a ante. Sem congue tempus est ante maecenas. Pellentesque mattis arcu purus; odio fames montes. Hendrerit netus placerat imperdiet himenaeos mauris luctus. Consectetur nullam class fringilla ex; et blandit. Justo iaculis eros potenti morbi fringilla egestas. Himenaeos tortor vestibulum platea taciti in tellus elementum, sed montes.",
+      "due_date": "2025-03-07",
+      "task_status": "Done",
+      "color": "#2ECC71",
+      "priority": "3"
+    },
+    {
+      "id": "17",
+      "title": "Bug Fix: Mobile Menu",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Mauris maecenas aliquet purus congue sem amet tellus quam taciti. Aenean feugiat morbi cursus euismod habitant nibh commodo ad? Magna quis amet lobortis finibus posuere nullam elit. Laoreet enim velit nisi ex, nec morbi volutpat etiam sit? Tincidunt eu penatibus faucibus eget magnis.",
+      "due_date": "2025-03-06",
+      "task_status": "Done",
+      "color": "#7D3C98",
+      "priority": "4"
+    },
+    {
+      "id": "18",
+      "title": "Update Documentation",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Posuere purus euismod libero leo et dis. In sociosqu varius non gravida vivamus at. Ultricies feugiat penatibus mi cras, nullam netus. Duis nisi tempor interdum posuere natoque sollicitudin.",
+      "due_date": "2025-03-05",
+      "task_status": "Done",
+      "color": "#F39C12",
+      "priority": "1"
+    },
+    {
+      "id": "19",
+      "title": "Launch Marketing Campaign",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Parturient felis nostra nullam montes, lacinia rhoncus nibh. Nam interdum vestibulum ligula ridiculus fames massa? Nulla maecenas commodo vel lacus vulputate convallis varius. Nascetur habitant egestas feugiat tristique class penatibus eu. Lobortis natoque urna scelerisque urna rutrum.",
+      "due_date": "2025-03-04",
+      "task_status": "Done",
+      "color": "#F1C40F",
+      "priority": "2"
+    },
+    {
+      "id": "20",
+      "title": "Migrate to Production",
+      "content": "Lorem ipsum odor amet, consectetuer adipiscing elit. Vivamus scelerisque at leo himenaeos eleifend, ad scelerisque pellentesque. Diam habitasse et; lacus in bibendum est. Massa taciti lacinia tincidunt cras maecenas suscipit urna. Mus maecenas et dolor fusce interdum suscipit mus?",
+      "due_date": "2025-03-03",
+      "task_status": "Done",
+      "color": "#E74C3C",
+      "priority": "1"
+    }
+  ]
+}
