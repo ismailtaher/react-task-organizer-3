@@ -194,6 +194,15 @@ nav a:focus {
   cursor: pointer;
 }
 
+.task:hover {
+  background-color: #ededed;
+  transition: background-color ease-in-out 100ms;
+  -webkit-transition: background-color ease-in-out 100ms;
+  -moz-transition: background-color ease-in-out 100ms;
+  -ms-transition: background-color ease-in-out 100ms;
+  -o-transition: background-color ease-in-out 100ms;
+}
+
 .card-buttons {
   position: absolute;
   right: 5px;
