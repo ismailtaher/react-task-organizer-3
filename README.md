@@ -18,7 +18,12 @@ Also the tasks are now sorted on the basis of their **priority** (low, medium, h
 
 Each container now has limitations to what task it can accept or not depending on that task's status. A green outline will appear over certain containers to signify if they can accept that task or not.
 
-A progress bar is shown below the task in the TaskCard component (right now the progress bar depends on the task’s status e.g. if a task’s status is “To Do”, the progress bar would show 25% and if the task’s status is “In Review”, the progress bar would show 75%).
+- Added `key_objectives` attribute in each task. Now each task can have it’s own set of objectives to be completed.
+- These objectives can be added/removed when Creating a Task `AddTaskForm.jsx` and Updating a Task `EditTaskForm.jsx`.
+- To update the status of an objective you can use the checkboxes when you open a task (by clicking on it) `SingleTaskPage.jsx` . Also created a new mutation `toggleObjective` that does **optimistic updates** to the state of an objective, using RTK query in `tasksSlice.js`.
+- The **progress bar** of a task now shows progress on the basis of how many **key_objectives** have been completed.
+
+The progress bar of a task now shows progress on the basis of how many key_objectives have been completed.
 
 UI updates also applied along with media queries to make it work on all screen sizes (hopefully).
 
@@ -26,14 +31,4 @@ UI updates also applied along with media queries to make it work on all screen s
 
 ![Screenshot 2025-03-18 at 8 59 20 PM](https://github.com/user-attachments/assets/d7909290-7a5e-4eb0-b9f2-7fb01012dc65)
 
-![Screenshot 2025-03-18 at 8 58 13 PM](https://github.com/user-attachments/assets/b41f329e-f52c-4729-b3a3-743a8aa75e2b)
-
-![Screenshot 2025-03-18 at 8 58 23 PM](https://github.com/user-attachments/assets/6984ec00-8f18-4c44-a9d9-86d668e092ea)
-
 ![Screenshot 2025-03-18 at 8 58 31 PM](https://github.com/user-attachments/assets/7caaa5a8-4200-4b2b-8024-2ba30c70bdeb)
-
-
-
-
-
-
