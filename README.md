@@ -31,4 +31,11 @@ UI updates also applied along with media queries to make it work on all screen s
 
 ![Screenshot 2025-03-18 at 8 59 20 PM](https://github.com/user-attachments/assets/d7909290-7a5e-4eb0-b9f2-7fb01012dc65)
 
-![Screenshot 2025-03-18 at 8 58 31 PM](https://github.com/user-attachments/assets/7caaa5a8-4200-4b2b-8024-2ba30c70bdeb)
+![Screenshot 2025-03-19 at 5 05 24 PM](https://github.com/user-attachments/assets/7022de39-5121-461a-8f7c-339b41222a38)
+
+![Screenshot 2025-03-19 at 5 05 05 PM](https://github.com/user-attachments/assets/daf21a81-dac8-46f0-8fdd-17751b967f22)
+
+![Screenshot 2025-03-19 at 5 08 12 PM](https://github.com/user-attachments/assets/05c20a22-dda0-4fce-91b5-6aa0c95b3835)
+
+![Screenshot 2025-03-19 at 5 10 41 PM](https://github.com/user-attachments/assets/665f97a1-fb27-4264-a002-0e3e347cfef4)
+
