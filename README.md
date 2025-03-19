@@ -27,9 +27,10 @@ The progress bar of a task now shows progress on the basis of how many key_objec
 
 UI updates also applied along with media queries to make it work on all screen sizes (hopefully).
 
-![Screenshot 2025-03-18 at 8 54 50 PM](https://github.com/user-attachments/assets/6909a7d5-0a6d-46e6-a0e2-9431bb0eda7c)
+<img width="1437" alt="Screenshot 2025-03-19 at 5 51 39 PM" src="https://github.com/user-attachments/assets/9a62beac-6aaa-4de7-9478-63dcb892033f" />
 
-![Screenshot 2025-03-18 at 8 59 20 PM](https://github.com/user-attachments/assets/d7909290-7a5e-4eb0-b9f2-7fb01012dc65)
+<img width="1437" alt="Screenshot 2025-03-19 at 5 52 33 PM" src="https://github.com/user-attachments/assets/83424e43-764e-482a-a606-dcb0111df34a" />
+
 
 ![Screenshot 2025-03-19 at 5 05 24 PM](https://github.com/user-attachments/assets/7022de39-5121-461a-8f7c-339b41222a38)
 
