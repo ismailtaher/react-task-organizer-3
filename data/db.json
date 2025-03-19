@@ -27,6 +27,10 @@
       "id": "2",
       "title": "Fix Login Bug",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "due_date": "2025-03-12",
+      "task_status": "To Do",
+      "color": "#33FF57",
+      "priority": "4",
       "key_objectives": [
         {
           "name": "Objective 1",
@@ -40,11 +44,7 @@
           "name": "Objective 3",
           "status": false
         }
-      ],
-      "due_date": "2025-03-12",
-      "task_status": "To Do",
-      "color": "#33FF57",
-      "priority": "4"
+      ]
     },
     {
       "id": "3",
@@ -237,11 +237,11 @@
       "key_objectives": [
         {
           "name": "Objective 31",
-          "status": false
+          "status": true
         },
         {
           "name": "Objective 32",
-          "status": false
+          "status": true
         },
         {
           "name": "Objective 33",
@@ -287,11 +287,11 @@
         },
         {
           "name": "Objective 38",
-          "status": false
+          "status": true
         },
         {
           "name": "Objective 39",
-          "status": false
+          "status": true
         }
       ],
       "due_date": "2025-03-13",
@@ -306,7 +306,7 @@
       "key_objectives": [
         {
           "name": "Objective 40",
-          "status": true
+          "status": false
         },
         {
           "name": "Objective 41",
@@ -360,7 +360,7 @@
         },
         {
           "name": "Objective 48",
-          "status": false
+          "status": true
         }
       ],
       "due_date": "2025-03-07",
@@ -375,7 +375,7 @@
       "key_objectives": [
         {
           "name": "Objective 49",
-          "status": false
+          "status": true
         },
         {
           "name": "Objective 50",
@@ -402,7 +402,7 @@
         },
         {
           "name": "Objective 53",
-          "status": false
+          "status": true
         },
         {
           "name": "Objective 54",

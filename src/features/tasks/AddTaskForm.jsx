@@ -9,6 +9,7 @@ const AddTaskForm = ({ taskPriority, HEX_CODE_REGEX, onClose }) => {
 
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [keyObjectives, setKeyObjectives] = useState([]);
   const [dueDate, setDueDate] = useState("");
   const [color, setColor] = useState("");
   const [priority, setPriority] = useState("");
@@ -18,6 +19,11 @@ const AddTaskForm = ({ taskPriority, HEX_CODE_REGEX, onClose }) => {
 
   const onTitleChanged = (e) => setTitle(e.target.value);
   const onContentChanged = (e) => setContent(e.target.value);
+  const onObjectiveChanged = (index, newName) => {
+    setKeyObjectives((prev) =>
+      prev.map((obj, i) => (i === index ? { ...obj, name: newName } : obj))
+    );
+  };
   const onDueDateChanged = (e) => setDueDate(e.target.value);
   const onColorChanged = (e) => {
     const value = e.target.value;
@@ -45,6 +51,7 @@ const AddTaskForm = ({ taskPriority, HEX_CODE_REGEX, onClose }) => {
           task_status: "To Do",
           color,
           priority,
+          key_objectives: keyObjectives,
         }).unwrap();
 
         setTitle("");
@@ -52,6 +59,7 @@ const AddTaskForm = ({ taskPriority, HEX_CODE_REGEX, onClose }) => {
         setDueDate("");
         setColor("");
         setPriority("");
+        setKeyObjectives([]);
         onClose();
       } catch (err) {
         console.error("Failed to save the post", err);
@@ -65,6 +73,14 @@ const AddTaskForm = ({ taskPriority, HEX_CODE_REGEX, onClose }) => {
       {priority.name}
     </option>
   ));
+
+  const addNewObjective = () => {
+    setKeyObjectives((prev) => [...prev, { name: "", status: false }]);
+  };
+
+  const removeObjective = (index) => {
+    setKeyObjectives((prev) => prev.filter((objRemoved, i) => i !== index));
+  };
 
   return (
     <section>
@@ -86,6 +102,26 @@ const AddTaskForm = ({ taskPriority, HEX_CODE_REGEX, onClose }) => {
           value={content}
           onChange={onContentChanged}
         />
+        <label htmlFor="keyObjectives">Key Objectives:</label>
+        {keyObjectives.map((obj, i) => (
+          <div key={i}>
+            <input
+              type="text"
+              value={obj.name}
+              onChange={(e) => onObjectiveChanged(i, e.target.value)}
+            />
+            <button
+              type="button"
+              title="Remove"
+              className="times-obj"
+              onClick={() => removeObjective(i)}>
+              &times;
+            </button>
+          </div>
+        ))}
+        <button type="button" className="button" onClick={addNewObjective}>
+          Add Objective
+        </button>
 
         <label htmlFor="dueDate">Due Date:</label>
         <input

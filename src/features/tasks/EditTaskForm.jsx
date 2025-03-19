@@ -1,11 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import {
-  useDeleteTaskMutation,
-  useGetTasksQuery,
-  useUpdateTaskMutation,
-} from "./tasksSlice";
+import { useNavigate } from "react-router-dom";
+import { useGetTasksQuery, useUpdateTaskMutation } from "./tasksSlice";
 
 const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
   /* const { taskId } = useParams(); */
@@ -13,7 +9,7 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
 
   // update task & delete task mutations
   const [updateTask, { isLoading }] = useUpdateTaskMutation();
-  const [deleteTask] = useDeleteTaskMutation();
+  /* const [deleteTask] = useDeleteTaskMutation(); */
 
   const {
     task,
@@ -29,6 +25,7 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
 
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [keyObjectives, setKeyObjectives] = useState([]);
   const [dueDate, setDueDate] = useState("");
   const [status, setStatus] = useState("");
   const [color, setColor] = useState("");
@@ -45,6 +42,7 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
       setStatus(task.task_status || "");
       setColor(task.color || "");
       setPriority(task.priority || "");
+      setKeyObjectives(task.key_objectives ? task.key_objectives : []);
     }
   }, [
     task,
@@ -55,6 +53,7 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
     task?.task_status,
     task?.color,
     task?.priority,
+    task?.key_objectives,
   ]);
 
   if (isLoadingTasks) return <p>Loading</p>;
@@ -69,6 +68,18 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
 
   const onTitleChanged = (e) => setTitle(e.target.value);
   const onContentChanged = (e) => setContent(e.target.value);
+  const onObjectiveChanged = (index, newName) => {
+    setKeyObjectives((prev) =>
+      prev.map((obj, i) => (i === index ? { ...obj, name: newName } : obj))
+    );
+  };
+  /* const onObjectiveStatusChanged = (index) => {
+    setKeyObjectives((prev) =>
+      prev.map((obj, i) =>
+        i === index ? { ...obj, status: !obj.status } : obj
+      )
+    );
+  }; */
   const onDueDateChanged = (e) => setDueDate(e.target.value);
   const onStatusChanged = (e) => setStatus(e.target.value);
   const onColorChanged = (e) => {
@@ -99,6 +110,7 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
           task_status: status,
           color,
           priority,
+          key_objectives: keyObjectives,
         }).unwrap();
 
         setTitle("");
@@ -107,6 +119,7 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
         setStatus("");
         setColor("");
         setPriority("");
+        setKeyObjectives([]);
         onClose();
       } catch (err) {
         console.error("Failed to save the Task", err);
@@ -121,7 +134,7 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
     </option>
   ));
 
-  const onDeleteTaskClicked = async () => {
+  /* const onDeleteTaskClicked = async () => {
     // delete task functionality
     try {
       await deleteTask({ id: task?.id }).unwrap();
@@ -136,6 +149,14 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
     } catch (err) {
       console.error("Failed to delete the Task", err);
     }
+  }; */
+
+  const addNewObjective = () => {
+    setKeyObjectives((prev) => [...prev, { name: "", status: false }]);
+  };
+
+  const removeObjective = (index) => {
+    setKeyObjectives((prev) => prev.filter((objRemoved, i) => i !== index));
   };
 
   return (
@@ -158,6 +179,26 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
           value={content}
           onChange={onContentChanged}
         />
+        <label htmlFor="keyObjectives">Key Objectives:</label>
+        {keyObjectives.map((obj, i) => (
+          <div key={i}>
+            <input
+              type="text"
+              value={obj.name}
+              onChange={(e) => onObjectiveChanged(i, e.target.value)}
+            />
+            <button
+              type="button"
+              title="Remove"
+              className="times-obj"
+              onClick={() => removeObjective(i)}>
+              &times;
+            </button>
+          </div>
+        ))}
+        <button type="button" className="button" onClick={addNewObjective}>
+          Add Objective
+        </button>
 
         <label htmlFor="dueDate">Due Date:</label>
         <input

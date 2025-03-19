@@ -1,14 +1,15 @@
 import React from "react";
 
 const TaskProgressBar = ({ task }) => {
-  const progressMap = {
-    "To Do": 25,
-    "In Progress": 50,
-    "In Review": 75,
-    Done: 100,
-  };
+  if (!task || !task.key_objectives) return null;
 
-  const progress = progressMap[task.task_status] || 0; // Default to 0 if undefined
+  const totalObjectives = task.key_objectives.length;
+  const completedObjectives = task.key_objectives.filter(
+    (obj) => obj.status === true
+  ).length;
+  const progress =
+    totalObjectives > 0 ? (completedObjectives / totalObjectives) * 100 : 0;
+
   return (
     <div style={{ marginTop: "10px", width: "100%" }}>
       <div

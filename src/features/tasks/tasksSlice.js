@@ -60,6 +60,36 @@ export const extendedApiSlice = apiSlice.injectEndpoints({
       }),
       invalidatesTags: (result, error, arg) => [{ type: "Task", id: arg.id }],
     }),
+    toggleObjective: builder.mutation({
+      query: ({ taskId, key_objectives }) => ({
+        url: `tasks/${taskId}`,
+        method: "PATCH",
+        body: { key_objectives },
+      }),
+      async onQueryStarted(
+        { taskId, key_objectives },
+        { dispatch, queryFulfilled }
+      ) {
+        // `updateQueryData` requires the endpoint name and cache key arguments,
+        // so that it knows which piece of cache state to update
+        const pathResult = dispatch(
+          extendedApiSlice.util.updateQueryData(
+            "getTasks",
+            undefined,
+            (draft) => {
+              // the draft is Immer-wrapped and can be 'mutated' like in create slice
+              const task = draft.entities[taskId];
+              if (task) task.key_objectives = key_objectives;
+            }
+          )
+        );
+        try {
+          await queryFulfilled;
+        } catch {
+          pathResult.undo();
+        }
+      },
+    }),
   }),
 });
 
@@ -69,6 +99,7 @@ export const {
   useAddNewTaskMutation,
   useUpdateTaskMutation,
   useDeleteTaskMutation,
+  useToggleObjectiveMutation,
 } = extendedApiSlice;
 
 // return the query result object
