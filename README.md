@@ -20,7 +20,7 @@ Each container now has limitations to what task it can accept or not depending o
 
 - Added `key_objectives` attribute in each task. Now each task can have it’s own set of objectives to be completed.
 - These objectives can be added/removed when Creating a Task `AddTaskForm.jsx` and Updating a Task `EditTaskForm.jsx`.
-- To update the status of an objective you can use the checkboxes when you open a task (by clicking on it) `SingleTaskPage.jsx` . Also created a new mutation `toggleObjective` that does **optimistic updates** to the state of an objective, using RTK query in `tasksSlice.js`.
+- To update the status of an objective you can use the checkboxes when you open a task (by clicking on it) `SingleTaskPage.jsx` . Also created a new mutation `toggleObjective` that does **optimistic updates** to the state of that objective's Task, using RTK query in `tasksSlice.js`.
 - The **progress bar** of a task now shows progress on the basis of how many **key_objectives** have been completed.
 
 The progress bar of a task now shows progress on the basis of how many key_objectives have been completed.
@@ -38,4 +38,3 @@ UI updates also applied along with media queries to make it work on all screen s
 ![Screenshot 2025-03-19 at 5 08 12 PM](https://github.com/user-attachments/assets/05c20a22-dda0-4fce-91b5-6aa0c95b3835)
 
 ![Screenshot 2025-03-19 at 5 10 41 PM](https://github.com/user-attachments/assets/665f97a1-fb27-4264-a002-0e3e347cfef4)
-
