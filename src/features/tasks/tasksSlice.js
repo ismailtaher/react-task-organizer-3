@@ -32,6 +32,16 @@ export const extendedApiSlice = apiSlice.injectEndpoints({
       }),
       invalidatesTags: (result, error, arg) => [{ type: "Task", id: arg.id }],
     }),
+    getTasksByUserId: builder.query({
+      query: (id) => `tasks/?userId=${id}`,
+      transformResponse: (responseData) => {
+        return tasksAdapter.setAll(initialState, responseData);
+      },
+      providesTags: (result, error, arg) => {
+        console.log(result);
+        return [...result.ids.map((id) => ({ type: "Task", id }))];
+      },
+    }),
     addNewTask: builder.mutation({
       query: (initialTask) => ({
         url: "/tasks",
@@ -96,6 +106,7 @@ export const extendedApiSlice = apiSlice.injectEndpoints({
 export const {
   useGetTasksQuery,
   useOnDragTaskMutation,
+  useGetTasksByUserIdQuery,
   useAddNewTaskMutation,
   useUpdateTaskMutation,
   useDeleteTaskMutation,

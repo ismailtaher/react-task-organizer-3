@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // to get the tasks immediately after app loads
 store.dispatch(extendedApiSlice.endpoints.getTasks.initiate());
+store.dispatch(extendedApiSlice.endpoints.getUsers.initiate());
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
