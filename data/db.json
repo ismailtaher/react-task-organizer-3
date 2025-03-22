@@ -16,7 +16,8 @@
         }
       },
       "phone": "1-770-736-8031 x56442",
-      "website": "hildegard.org"
+      "website": "hildegard.org",
+      "color": "#AF1B3F"
     },
     {
       "id": "2",
@@ -34,7 +35,8 @@
         }
       },
       "phone": "010-692-6593 x09125",
-      "website": "anastasia.net"
+      "website": "anastasia.net",
+      "color": "#473144"
     },
     {
       "id": "3",
@@ -52,7 +54,8 @@
         }
       },
       "phone": "1-463-123-4447",
-      "website": "ramiro.info"
+      "website": "ramiro.info",
+      "color": "#273043"
     },
     {
       "id": "4",
@@ -70,7 +73,8 @@
         }
       },
       "phone": "493-170-9623 x156",
-      "website": "kale.biz"
+      "website": "kale.biz",
+      "color": "#DD0426"
     },
     {
       "id": "5",
@@ -88,7 +92,8 @@
         }
       },
       "phone": "(254)954-1289",
-      "website": "demarco.info"
+      "website": "demarco.info",
+      "color": "#454851"
     },
     {
       "id": "6",
@@ -106,7 +111,8 @@
         }
       },
       "phone": "1-477-935-8478 x6430",
-      "website": "ola.org"
+      "website": "ola.org",
+      "color": "#73956F"
     },
     {
       "id": "7",
@@ -124,7 +130,8 @@
         }
       },
       "phone": "210.067.6132",
-      "website": "elvis.io"
+      "website": "elvis.io",
+      "color": "#553E4E"
     },
     {
       "id": "8",
@@ -142,7 +149,8 @@
         }
       },
       "phone": "586.493.6943 x140",
-      "website": "jacynthe.com"
+      "website": "jacynthe.com",
+      "color": "#3D405B"
     },
     {
       "id": "9",
@@ -160,7 +168,8 @@
         }
       },
       "phone": "(775)976-6794 x41206",
-      "website": "conrad.com"
+      "website": "conrad.com",
+      "color": "#7E3F8F"
     },
     {
       "id": "10",
@@ -178,7 +187,8 @@
         }
       },
       "phone": "024-648-3804",
-      "website": "ambrose.net"
+      "website": "ambrose.net",
+      "color": "#4A5759"
     }
   ],
   "tasks": [
@@ -322,7 +332,7 @@
         }
       ],
       "due_date": "2025-03-10",
-      "task_status": "In Progress",
+      "task_status": "In Review",
       "color": "#581845",
       "priority": "4"
     },
@@ -442,7 +452,7 @@
         }
       ],
       "due_date": "2025-03-08",
-      "task_status": "In Review",
+      "task_status": "Done",
       "color": "#1A5276",
       "priority": "2"
     },
@@ -502,7 +512,7 @@
       "key_objectives": [
         {
           "name": "Objective 40",
-          "status": false
+          "status": true
         },
         {
           "name": "Objective 41",
@@ -562,7 +572,7 @@
         }
       ],
       "due_date": "2025-03-07",
-      "task_status": "Done",
+      "task_status": "In Review",
       "color": "#2ECC71",
       "priority": "3"
     },
@@ -650,7 +660,7 @@
         },
         {
           "name": "Objective 59",
-          "status": true
+          "status": false
         },
         {
           "name": "Objective 60",

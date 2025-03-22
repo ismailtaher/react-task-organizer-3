@@ -1,5 +1,7 @@
 import TasksBoard from "./features/tasks/TasksBoard";
 import Layout from "./components/Layout";
+import UsersList from "./features/users/UsersList";
+import UserPage from "./features/users/UserPage";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 
@@ -14,10 +16,19 @@ function App() {
   ];
 
   const [addingTask, setAddingTask] = useState(null);
+  const [usersList, setUsersList] = useState(null);
 
   return (
     <Routes>
-      <Route path="/" element={<Layout setAddingTask={setAddingTask} />}>
+      <Route
+        path="/"
+        element={
+          <Layout
+            setAddingTask={setAddingTask}
+            usersList={usersList}
+            setUsersList={setUsersList}
+          />
+        }>
         <Route
           index
           element={
@@ -26,9 +37,26 @@ function App() {
               HEX_CODE_REGEX={HEX_CODE_REGEX}
               addingTask={addingTask}
               setAddingTask={setAddingTask}
+              usersList={usersList}
+              setUsersList={setUsersList}
             />
           }
         />
+        <Route path="user">
+          <Route
+            path=":userId"
+            element={
+              <UserPage
+                taskPriority={taskPriority}
+                HEX_CODE_REGEX={HEX_CODE_REGEX}
+                addingTask={addingTask}
+                setAddingTask={setAddingTask}
+                usersList={usersList}
+                setUsersList={setUsersList}
+              />
+            }
+          />
+        </Route>
       </Route>
     </Routes>
   );

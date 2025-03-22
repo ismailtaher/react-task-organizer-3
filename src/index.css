@@ -34,6 +34,8 @@ header {
 
 header button {
   background-color: inherit;
+  cursor: pointer;
+  padding: 0;
   border: none;
 }
 
@@ -128,6 +130,10 @@ nav a:focus {
   @media only screen and (min-width: 1280px) {
     max-height: 500px;
   }
+}
+
+.user-page-div .task-container {
+  max-height: 400px;
 }
 
 .task-container.highlight-drop {
@@ -311,7 +317,17 @@ form .button:hover {
   color: white;
 }
 
-.single-task a,
+.single-task-credit {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.single-task-credit span {
+  margin-right: 0.5rem;
+}
+
+/* .single-task a,
 .single-task a:visited {
   background-color: #555;
   padding: 0.5rem;
@@ -329,6 +345,17 @@ form .button:hover {
 .single-task a:focus {
   color: white;
   background-color: #888;
+} */
+
+.single-task-credit a {
+  background-color: white;
+  text-decoration: none;
+  color: black;
+}
+
+.single-task-credit a:hover,
+.single-task-credit a:focus {
+  text-decoration: underline;
 }
 
 .single-task form {
@@ -434,4 +461,46 @@ form .button:hover {
 
 .cancel-button:hover {
   background-color: #555;
+}
+
+.card-assignee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-sec {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.user-ul {
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: start;
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.user-link {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-flow: row;
+  padding: 0.5rem;
+  padding-left: 0;
+  text-decoration: none;
+  color: black;
+}
+
+.user-link:hover {
+  text-decoration: underline;
+}
+
+.user-link img:hover {
+  text-decoration: none;
 }

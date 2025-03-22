@@ -8,16 +8,27 @@ import { useSelector } from "react-redux";
 import { selectAllTasks } from "./tasksSlice";
 import TasksContainer from "./TasksContainer";
 import { useGetTasksQuery } from "./tasksSlice";
+import UsersList from "../users/UsersList";
+import { Routes } from "react-router-dom";
 
 const TasksBoard = ({
   taskPriority,
   HEX_CODE_REGEX,
   addingTask,
   setAddingTask,
+  usersList,
+  setUsersList,
+  userTasks,
+  userTaskValue,
 }) => {
   const { isLoading, isSuccess, isError, error } = useGetTasksQuery();
 
-  const tasks = useSelector(selectAllTasks);
+  let tasks;
+  if (userTaskValue === true) {
+    tasks = userTasks;
+  } else {
+    tasks = useSelector(selectAllTasks);
+  }
 
   const [selectedTask, setSelectedTask] = useState(null);
   const [editingTask, setEditingTask] = useState(null);
@@ -108,6 +119,11 @@ const TasksBoard = ({
             onClose={() => setDeletingTask(null)}
           />
         )}
+      </Modal>
+
+      {/* User List Modal */}
+      <Modal isOpen={!!usersList} onClose={() => setUsersList(null)}>
+        {usersList && <UsersList onClose={() => setUsersList(null)} />}
       </Modal>
     </section>
   );

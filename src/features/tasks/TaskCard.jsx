@@ -1,5 +1,6 @@
 import React from "react";
 import TaskProgressBar from "./TaskProgressBar";
+import TaskAssignee from "./TaskAssignee";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPenToSquare, faTrashAlt } from "@fortawesome/free-regular-svg-icons";
 
@@ -76,6 +77,9 @@ const TaskCard = ({
           }}>
           <FontAwesomeIcon icon={faTrashAlt} />
         </button>
+      </div>
+      <div style={{ marginTop: "1rem" }}>
+        <TaskAssignee userId={task.userId} />
       </div>
     </article>
   );

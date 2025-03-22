@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { selectTaskById } from "./tasksSlice";
 import { useToggleObjectiveMutation } from "./tasksSlice";
+import TaskAssignee from "./TaskAssignee";
 
 const SingleTaskPage = ({ taskPriority, taskId }) => {
   /* const { taskId } = useParams(); */
@@ -58,6 +59,10 @@ const SingleTaskPage = ({ taskPriority, taskId }) => {
       <p>
         <span className="bold">Due Date:</span> {task.due_date}
       </p>
+      <span className="single-task-credit">
+        <span className="bold">Assignee: </span>{" "}
+        <TaskAssignee userId={task.userId} />
+      </span>
     </article>
   );
 };
