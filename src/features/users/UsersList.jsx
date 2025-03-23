@@ -19,20 +19,20 @@ const UsersList = ({ onClose }) => {
   } else if (isSuccess) {
     const renderedUsers = users?.ids?.map((userId) => (
       <li key={userId} className="user-li">
+        <Avatar
+          style={{ marginRight: "0.5rem" }}
+          alt={users.entities[userId].name}
+          sx={{
+            width: 32,
+            height: 32,
+            bgcolor: users.entities[userId].color,
+          }}>
+          {users.entities[userId].name?.charAt(0)}
+        </Avatar>
         <Link
           to={`/user/${userId}`}
           className="user-link"
           onClick={() => onClose()}>
-          <Avatar
-            style={{ marginRight: "0.5rem" }}
-            alt={users.entities[userId].name}
-            sx={{
-              width: 32,
-              height: 32,
-              bgcolor: users.entities[userId].color,
-            }}>
-            {users.entities[userId].name?.charAt(0)}
-          </Avatar>
           {users?.entities[userId]?.name}
         </Link>
       </li>
