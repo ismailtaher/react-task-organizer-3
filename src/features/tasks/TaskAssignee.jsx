@@ -67,7 +67,7 @@ const TaskAssignee = ({ userId }) => {
               ...stringAvatar("Unknown").sx,
             }}
           />
-          <span>Unknown Author</span>
+          <span>Unknown Assignee</span>
         </>
       )}
     </span>

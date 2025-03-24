@@ -2,6 +2,8 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGetTasksQuery, useUpdateTaskMutation } from "./tasksSlice";
+import { selectAllUsers } from "../users/usersSlice";
+import { useSelector } from "react-redux";
 
 const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
   /* const { taskId } = useParams(); */
@@ -25,6 +27,7 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
 
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [userId, setUserId] = useState("");
   const [keyObjectives, setKeyObjectives] = useState([]);
   const [dueDate, setDueDate] = useState("");
   const [status, setStatus] = useState("");
@@ -32,10 +35,13 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
   const [priority, setPriority] = useState("");
   const [colorError, setColorError] = useState("");
 
+  const users = useSelector((state) => selectAllUsers(state));
+
   useEffect(() => {
     if (isSuccess && task) {
       setTitle(task.title || "");
       setContent(task.content || "");
+      setUserId(task.userId || "");
       setDueDate(
         task.due_date ? new Date(task.due_date).toISOString().split("T")[0] : ""
       );
@@ -49,6 +55,7 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
     isSuccess,
     task?.title,
     task?.content,
+    task?.userId,
     task?.due_date,
     task?.task_status,
     task?.color,
@@ -68,6 +75,7 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
 
   const onTitleChanged = (e) => setTitle(e.target.value);
   const onContentChanged = (e) => setContent(e.target.value);
+  const onAssigneeChanged = (e) => setUserId(e.target.value);
   const onObjectiveChanged = (index, newName) => {
     setKeyObjectives((prev) =>
       prev.map((obj, i) => (i === index ? { ...obj, name: newName } : obj))
@@ -94,7 +102,7 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
   const onPriorityChanged = (e) => setPriority(e.target.value);
 
   const canSave =
-    [title, content, dueDate, status, color, priority].every(Boolean) &&
+    [title, content, userId, dueDate, status, color, priority].every(Boolean) &&
     HEX_CODE_REGEX.test(color) &&
     !isLoading;
 
@@ -106,6 +114,7 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
           id: task.id,
           title,
           content,
+          userId,
           due_date: dueDate,
           task_status: status,
           color,
@@ -115,6 +124,7 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
 
         setTitle("");
         setContent("");
+        setUserId("");
         setDueDate("");
         setStatus("");
         setColor("");
@@ -134,6 +144,12 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
     </option>
   ));
 
+  let userOptions;
+  userOptions = users.map((user) => (
+    <option value={user.id} key={user.id}>
+      {user.name}
+    </option>
+  ));
   /* const onDeleteTaskClicked = async () => {
     // delete task functionality
     try {
@@ -174,11 +190,18 @@ const EditTaskForm = ({ HEX_CODE_REGEX, taskPriority, taskId, onClose }) => {
 
         <label htmlFor="taskContent">Content:</label>
         <textarea
-          name="taskContetn"
+          name="taskContent"
           id="taskContent"
           value={content}
           onChange={onContentChanged}
         />
+
+        <label htmlFor="assignee">Assignee:</label>
+        <select id="assignee" value={userId} onChange={onAssigneeChanged}>
+          <option value=""></option>
+          {userOptions}
+        </select>
+
         <label htmlFor="keyObjectives">Key Objectives:</label>
         {keyObjectives.map((obj, i) => (
           <div key={i}>

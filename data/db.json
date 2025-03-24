@@ -284,7 +284,7 @@
         }
       ],
       "due_date": "2025-03-18",
-      "task_status": "In Progress",
+      "task_status": "In Review",
       "color": "#FF33A8",
       "priority": "2"
     },
@@ -332,7 +332,7 @@
         }
       ],
       "due_date": "2025-03-10",
-      "task_status": "In Review",
+      "task_status": "In Progress",
       "color": "#581845",
       "priority": "4"
     },
@@ -500,7 +500,7 @@
         }
       ],
       "due_date": "2025-03-13",
-      "task_status": "In Review",
+      "task_status": "In Progress",
       "color": "#E74C3C",
       "priority": "3"
     },
@@ -524,7 +524,7 @@
         }
       ],
       "due_date": "2025-03-16",
-      "task_status": "In Review",
+      "task_status": "Done",
       "color": "#A93226",
       "priority": "4"
     },
@@ -596,7 +596,7 @@
         }
       ],
       "due_date": "2025-03-06",
-      "task_status": "Done",
+      "task_status": "In Review",
       "color": "#7D3C98",
       "priority": "4"
     },

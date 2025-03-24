@@ -3,22 +3,28 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { useAddNewTaskMutation } from "./tasksSlice";
+import { selectAllUsers } from "../users/usersSlice";
 
 const AddTaskForm = ({ taskPriority, HEX_CODE_REGEX, onClose }) => {
   const [addNewTask, { isLoading }] = useAddNewTaskMutation();
 
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [userId, setUserId] = useState("");
   const [keyObjectives, setKeyObjectives] = useState([]);
   const [dueDate, setDueDate] = useState("");
   const [color, setColor] = useState("");
   const [priority, setPriority] = useState("");
   const [colorError, setColorError] = useState("");
 
+  const users = useSelector((state) => selectAllUsers(state));
+
   const navigate = useNavigate();
 
   const onTitleChanged = (e) => setTitle(e.target.value);
   const onContentChanged = (e) => setContent(e.target.value);
+  const onAssigneeChanged = (e) => setUserId(e.target.value);
+  const onPriorityChanged = (e) => setPriority(e.target.value);
   const onObjectiveChanged = (index, newName) => {
     setKeyObjectives((prev) =>
       prev.map((obj, i) => (i === index ? { ...obj, name: newName } : obj))
@@ -34,10 +40,9 @@ const AddTaskForm = ({ taskPriority, HEX_CODE_REGEX, onClose }) => {
       setColorError("");
     }
   };
-  const onPriorityChanged = (e) => setPriority(e.target.value);
 
   const canSave =
-    [title, content, dueDate, color, priority].every(Boolean) &&
+    [title, content, userId, dueDate, color, priority].every(Boolean) &&
     HEX_CODE_REGEX.test(color) &&
     !isLoading;
 
@@ -47,6 +52,7 @@ const AddTaskForm = ({ taskPriority, HEX_CODE_REGEX, onClose }) => {
         await addNewTask({
           title,
           content,
+          userId,
           due_date: dueDate,
           task_status: "To Do",
           color,
@@ -56,6 +62,7 @@ const AddTaskForm = ({ taskPriority, HEX_CODE_REGEX, onClose }) => {
 
         setTitle("");
         setContent("");
+        setUserId("");
         setDueDate("");
         setColor("");
         setPriority("");
@@ -71,6 +78,13 @@ const AddTaskForm = ({ taskPriority, HEX_CODE_REGEX, onClose }) => {
   priorityOptions = taskPriority.map((priority) => (
     <option key={priority.id} value={priority.id}>
       {priority.name}
+    </option>
+  ));
+
+  let usersOptions;
+  usersOptions = users.map((user) => (
+    <option value={user.id} key={user.id}>
+      {user.name}
     </option>
   ));
 
@@ -102,6 +116,13 @@ const AddTaskForm = ({ taskPriority, HEX_CODE_REGEX, onClose }) => {
           value={content}
           onChange={onContentChanged}
         />
+
+        <label htmlFor="assignee">Assginee:</label>
+        <select id="assignee" value={userId} onChange={onAssigneeChanged}>
+          <option value=""></option>
+          {usersOptions}
+        </select>
+
         <label htmlFor="keyObjectives">Key Objectives:</label>
         {keyObjectives.map((obj, i) => (
           <div key={i}>
@@ -142,6 +163,7 @@ const AddTaskForm = ({ taskPriority, HEX_CODE_REGEX, onClose }) => {
           <option value=""></option>
           {priorityOptions}
         </select>
+
         <button
           className="button"
           type="button"
