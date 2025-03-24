@@ -28,7 +28,8 @@ The progress bar of a task now shows progress on the basis of how many key_objec
 UI updates also applied along with media queries to make it work on all screen sizes (hopefully).
 
 ### (users-edtion) (now merged with main):
-- Added users endpoint to `data/db.json`.
+
+- Added `/users` endpoint to `data/db.json`.
 - Added `userId` attribute to each task in order to assign users with their respective tasks.
 - `TaskCard.jsx` & `SingleTaskPage.jsx` now also display the username & avatar of the assignee user.
 - Created users' Avatar using **MUI's Avatar** component in `TaskAssignee.jsx` which uses a Users' initials to create their Avatar.
